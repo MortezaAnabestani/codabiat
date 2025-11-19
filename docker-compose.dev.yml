@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # MongoDB for Development
+  mongodb:
+    image: mongo:7
+    container_name: codabiat-mongodb-dev
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: codabiat
+      MONGO_INITDB_ROOT_PASSWORD: codabiat123
+      MONGO_INITDB_DATABASE: codabiat
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_dev_data:/data/db
+    networks:
+      - codabiat-dev-network
+
+networks:
+  codabiat-dev-network:
+    driver: bridge
+
+volumes:
+  mongodb_dev_data:

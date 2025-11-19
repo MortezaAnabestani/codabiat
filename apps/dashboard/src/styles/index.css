@@ -1,0 +1,64 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-200;
+  }
+
+  body {
+    @apply bg-white text-dark-900 font-vazir;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-dark-900 hover:bg-primary-600 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-900 text-white hover:bg-dark-700 focus:ring-dark-500;
+  }
+
+  .btn-outline {
+    @apply border-2 border-dark-900 text-dark-900 hover:bg-dark-900 hover:text-white focus:ring-dark-500;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-dark-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-dark-100;
+  }
+}
+
+/* استایل برای TinyMCE */
+.tox-tinymce {
+  @apply rounded-md border border-dark-200;
+}
+
+/* اسکرول‌بار سفارشی */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-400;
+}

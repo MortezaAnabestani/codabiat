@@ -1,0 +1,103 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-200;
+  }
+
+  body {
+    @apply bg-white text-dark-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-dark-900 hover:bg-primary-600 focus:ring-primary-500;
+  }
+
+  .btn-outline {
+    @apply border-2 border-dark-900 text-dark-900 hover:bg-dark-900 hover:text-white focus:ring-dark-500;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-dark-100 hover:shadow-md transition-shadow duration-200;
+  }
+
+  /* کد بلاک‌ها */
+  .code-block {
+    @apply relative rounded-md overflow-hidden my-4;
+  }
+
+  .code-block pre {
+    @apply p-4 overflow-x-auto;
+  }
+
+  /* نُت‌ها */
+  .note {
+    @apply p-4 rounded-md my-4 border-r-4;
+  }
+
+  .note-info {
+    @apply bg-blue-50 border-blue-500 text-blue-900;
+  }
+
+  .note-warning {
+    @apply bg-yellow-50 border-yellow-500 text-yellow-900;
+  }
+
+  .note-tip {
+    @apply bg-green-50 border-green-500 text-green-900;
+  }
+
+  .note-important {
+    @apply bg-red-50 border-red-500 text-red-900;
+  }
+}
+
+/* اسکرول‌بار سفارشی */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-400;
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
